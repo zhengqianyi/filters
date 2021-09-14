@@ -1,9 +1,9 @@
 #ifndef FT_BLOOM_FILTER_HPP
 #define FT_BLOOM_FILTER_HPP
 
-#include <ft/filter.hpp>
-#include <ft/bitvector.hpp>
-#include <ft/hasher.hpp>
+#include "filter.hpp"
+#include "bitvector.hpp"
+#include "hasher.hpp"
 
 #include <string>
 #include <random>
@@ -37,21 +37,25 @@ namespace ft
         /// have tow way to init a bloom_filter
 
         /// by cells and k
-        bloom_filter(size_t cells, size_t k_hash, HashType hashname);
+        bloom_filter(HashType hashname, size_t cells, size_t k_hash);
 
         /// by fp and capcity
         bloom_filter(double fp, size_t capacity, HashType hashname);
-
-        ~bloom_filter();
 
         using filter::add;
         using filter::lookup;
 
         /// Adds an element to the Bloom filter.
-        virtual void add(object const &o) override;
+        virtual void add(std::string const &o) override;
 
         /// Retrieves the count of an element.
-        virtual bool lookup(object const &o) const override;
+        virtual bool lookup(std::string const &o) const override;
+
+        /// get the cells num
+        size_t get_cells() const;
+
+        /// get the bits
+        std::string get_bits() const;
     };
 
     size_t bloom_filter::m(double fp, size_t capacity)
@@ -66,7 +70,7 @@ namespace ft
         return std::ceil(frac * std::log(2));
     }
 
-    bloom_filter ::bloom_filter(size_t cells, size_t k_hash, HashType hashname) : cells_(cells), bits_(cells), hash_name_(hashname)
+    bloom_filter ::bloom_filter(HashType hashname, size_t cells, size_t k_hash) : cells_(cells), bits_(cells), hash_name_(hashname)
     {
         //initial the seeds
         auto t = k_hash;
@@ -85,19 +89,28 @@ namespace ft
         }
     }
 
-    void bloom_filter ::add(object const &o)
+    void bloom_filter ::add(std::string const &o)
     {
         for (const auto s : seeds_)
-            bits_.set(hashf(hash_name_, o, s));
+            bits_.set(hashf(hash_name_, s, o));
     }
 
-
-    bool bloom_filter ::lookup(object const &o) const
+    bool bloom_filter ::lookup(std::string const &o) const
     {
         for (const auto s : seeds_)
-            if (bits_.check(hashf(hash_name_, o, s)) == true)
+            if (bits_.check(hashf(hash_name_, s, o)) == true)
                 return true;
         return false;
+    }
+
+    size_t bloom_filter::get_cells() const
+    {
+        return cells_;
+    }
+
+    std::string bloom_filter ::get_bits() const
+    {
+        return bits_.to_string();
     }
 
 } // namespace ft
