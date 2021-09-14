@@ -1,0 +1,57 @@
+\hypertarget{classft_1_1cuckoo__filter}{}\doxysection{ft\+::cuckoo\+\_\+filter Class Reference}
+\label{classft_1_1cuckoo__filter}\index{ft::cuckoo\_filter@{ft::cuckoo\_filter}}
+
+
+Inheritance diagram for ft\+::cuckoo\+\_\+filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classft_1_1cuckoo__filter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ft\+::cuckoo\+\_\+filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classft_1_1cuckoo__filter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a8eb31fa56b1b9ad1b70d4a6620f8002b}\label{classft_1_1cuckoo__filter_a8eb31fa56b1b9ad1b70d4a6620f8002b}} 
+{\bfseries cuckoo\+\_\+filter} (Hash\+Type hash\+\_\+name, size\+\_\+t cells, size\+\_\+t fingerprint\+\_\+size)
+\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a11bccc8d064411a0dc26cf62b70bd03d}\label{classft_1_1cuckoo__filter_a11bccc8d064411a0dc26cf62b70bd03d}} 
+virtual void \mbox{\hyperlink{classft_1_1cuckoo__filter_a11bccc8d064411a0dc26cf62b70bd03d}{add}} (std\+::string const \&o) override
+\begin{DoxyCompactList}\small\item\em Adds an element to the Bloom filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a43b6ea13412cb9ee7e834d3c180990e5}\label{classft_1_1cuckoo__filter_a43b6ea13412cb9ee7e834d3c180990e5}} 
+virtual bool \mbox{\hyperlink{classft_1_1cuckoo__filter_a43b6ea13412cb9ee7e834d3c180990e5}{lookup}} (std\+::string const \&o) const override
+\begin{DoxyCompactList}\small\item\em Retrieves the count of an element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a9b258229fcc4603523179b4383cf91d2}\label{classft_1_1cuckoo__filter_a9b258229fcc4603523179b4383cf91d2}} 
+bool \mbox{\hyperlink{classft_1_1cuckoo__filter_a9b258229fcc4603523179b4383cf91d2}{del}} (std\+::string const \&o)
+\begin{DoxyCompactList}\small\item\em delete \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_aca823da57b37bcc14b3c18be01a7ba7c}\label{classft_1_1cuckoo__filter_aca823da57b37bcc14b3c18be01a7ba7c}} 
+std\+::string {\bfseries get\+\_\+v} () const
+\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a1e6694fe776a182addb6b25840c76b47}\label{classft_1_1cuckoo__filter_a1e6694fe776a182addb6b25840c76b47}} 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classft_1_1cuckoo__filter_a1e6694fe776a182addb6b25840c76b47}{add}} (T const \&x)
+\begin{DoxyCompactList}\small\item\em Adds an element to the Bloom filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a68f69e9c9e6d3f7ec977761a860488f7}\label{classft_1_1cuckoo__filter_a68f69e9c9e6d3f7ec977761a860488f7}} 
+virtual void \mbox{\hyperlink{classft_1_1cuckoo__filter_a68f69e9c9e6d3f7ec977761a860488f7}{add}} (std\+::string const \&o)=0
+\begin{DoxyCompactList}\small\item\em Adds an element to the Bloom filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a479facaa17ee0da8ad6fc18f84bbb46c}\label{classft_1_1cuckoo__filter_a479facaa17ee0da8ad6fc18f84bbb46c}} 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classft_1_1cuckoo__filter_a479facaa17ee0da8ad6fc18f84bbb46c}{lookup}} (T const \&x) const
+\begin{DoxyCompactList}\small\item\em Retrieves the count of an element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1cuckoo__filter_a8df15f32ccbaa380f8325b7261ca7d6a}\label{classft_1_1cuckoo__filter_a8df15f32ccbaa380f8325b7261ca7d6a}} 
+virtual bool \mbox{\hyperlink{classft_1_1cuckoo__filter_a8df15f32ccbaa380f8325b7261ca7d6a}{lookup}} (std\+::string const \&o) const=0
+\begin{DoxyCompactList}\small\item\em Retrieves the count of an element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cuckoo\+\_\+filter.\+hpp\end{DoxyCompactItemize}

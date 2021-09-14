@@ -1,0 +1,81 @@
+\hypertarget{classft_1_1bloom__filter}{}\doxysection{ft\+::bloom\+\_\+filter Class Reference}
+\label{classft_1_1bloom__filter}\index{ft::bloom\_filter@{ft::bloom\_filter}}
+
+
+Inheritance diagram for ft\+::bloom\+\_\+filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classft_1_1bloom__filter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ft\+::bloom\+\_\+filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classft_1_1bloom__filter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classft_1_1bloom__filter_afda432c741d6b6599d23ab77a6a28fc4}{bloom\+\_\+filter}} (Hash\+Type hashname, size\+\_\+t cells, size\+\_\+t k\+\_\+hash)
+\begin{DoxyCompactList}\small\item\em have tow way to init a \mbox{\hyperlink{classft_1_1bloom__filter}{bloom\+\_\+filter}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a964829cf018f13a30133865c12273e22}\label{classft_1_1bloom__filter_a964829cf018f13a30133865c12273e22}} 
+\mbox{\hyperlink{classft_1_1bloom__filter_a964829cf018f13a30133865c12273e22}{bloom\+\_\+filter}} (double fp, size\+\_\+t capacity, Hash\+Type hashname)
+\begin{DoxyCompactList}\small\item\em by fp and capcity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_af1d955071c5133fe6932431a867e32f2}\label{classft_1_1bloom__filter_af1d955071c5133fe6932431a867e32f2}} 
+virtual void \mbox{\hyperlink{classft_1_1bloom__filter_af1d955071c5133fe6932431a867e32f2}{add}} (std\+::string const \&o) override
+\begin{DoxyCompactList}\small\item\em Adds an element to the Bloom filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a1bcf94ae70b954867ea2615b5d475bfa}\label{classft_1_1bloom__filter_a1bcf94ae70b954867ea2615b5d475bfa}} 
+virtual bool \mbox{\hyperlink{classft_1_1bloom__filter_a1bcf94ae70b954867ea2615b5d475bfa}{lookup}} (std\+::string const \&o) const override
+\begin{DoxyCompactList}\small\item\em Retrieves the count of an element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a96f31b78a52e6cc2fef1cf8ccafa15ca}\label{classft_1_1bloom__filter_a96f31b78a52e6cc2fef1cf8ccafa15ca}} 
+size\+\_\+t \mbox{\hyperlink{classft_1_1bloom__filter_a96f31b78a52e6cc2fef1cf8ccafa15ca}{get\+\_\+cells}} () const
+\begin{DoxyCompactList}\small\item\em get the cells num \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a13ab6cb812628571b9f9414f7c81cba8}\label{classft_1_1bloom__filter_a13ab6cb812628571b9f9414f7c81cba8}} 
+std\+::string \mbox{\hyperlink{classft_1_1bloom__filter_a13ab6cb812628571b9f9414f7c81cba8}{get\+\_\+bits}} () const
+\begin{DoxyCompactList}\small\item\em get the bits \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a1e6694fe776a182addb6b25840c76b47}\label{classft_1_1bloom__filter_a1e6694fe776a182addb6b25840c76b47}} 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classft_1_1bloom__filter_a1e6694fe776a182addb6b25840c76b47}{add}} (T const \&x)
+\begin{DoxyCompactList}\small\item\em Adds an element to the Bloom filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a68f69e9c9e6d3f7ec977761a860488f7}\label{classft_1_1bloom__filter_a68f69e9c9e6d3f7ec977761a860488f7}} 
+virtual void \mbox{\hyperlink{classft_1_1bloom__filter_a68f69e9c9e6d3f7ec977761a860488f7}{add}} (std\+::string const \&o)=0
+\begin{DoxyCompactList}\small\item\em Adds an element to the Bloom filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a479facaa17ee0da8ad6fc18f84bbb46c}\label{classft_1_1bloom__filter_a479facaa17ee0da8ad6fc18f84bbb46c}} 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classft_1_1bloom__filter_a479facaa17ee0da8ad6fc18f84bbb46c}{lookup}} (T const \&x) const
+\begin{DoxyCompactList}\small\item\em Retrieves the count of an element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a8df15f32ccbaa380f8325b7261ca7d6a}\label{classft_1_1bloom__filter_a8df15f32ccbaa380f8325b7261ca7d6a}} 
+virtual bool \mbox{\hyperlink{classft_1_1bloom__filter_a8df15f32ccbaa380f8325b7261ca7d6a}{lookup}} (std\+::string const \&o) const=0
+\begin{DoxyCompactList}\small\item\em Retrieves the count of an element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_a46b40a0105323aa4f8520637458ca6ce}\label{classft_1_1bloom__filter_a46b40a0105323aa4f8520637458ca6ce}} 
+static size\+\_\+t \mbox{\hyperlink{classft_1_1bloom__filter_a46b40a0105323aa4f8520637458ca6ce}{m}} (double fp, size\+\_\+t capcity)
+\begin{DoxyCompactList}\small\item\em Computes the number of cells based on a false-\/positive rate and capacity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classft_1_1bloom__filter_ab3e0d253cc0828818a8ed51665615fc8}\label{classft_1_1bloom__filter_ab3e0d253cc0828818a8ed51665615fc8}} 
+static size\+\_\+t \mbox{\hyperlink{classft_1_1bloom__filter_ab3e0d253cc0828818a8ed51665615fc8}{k}} (size\+\_\+t cells, size\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Computes the number of hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classft_1_1bloom__filter_afda432c741d6b6599d23ab77a6a28fc4}\label{classft_1_1bloom__filter_afda432c741d6b6599d23ab77a6a28fc4}} 
+\index{ft::bloom\_filter@{ft::bloom\_filter}!bloom\_filter@{bloom\_filter}}
+\index{bloom\_filter@{bloom\_filter}!ft::bloom\_filter@{ft::bloom\_filter}}
+\doxysubsubsection{\texorpdfstring{bloom\_filter()}{bloom\_filter()}}
+{\footnotesize\ttfamily ft\+::bloom\+\_\+filter\+::bloom\+\_\+filter (\begin{DoxyParamCaption}\item[{Hash\+Type}]{hashname,  }\item[{size\+\_\+t}]{cells,  }\item[{size\+\_\+t}]{k\+\_\+hash }\end{DoxyParamCaption})}
+
+
+
+have tow way to init a \mbox{\hyperlink{classft_1_1bloom__filter}{bloom\+\_\+filter}} 
+
+by cells and k 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+bloom\+\_\+filter.\+hpp\end{DoxyCompactItemize}
