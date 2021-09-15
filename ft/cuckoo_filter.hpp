@@ -4,8 +4,8 @@
 #include "filter.hpp"
 #include "cuckoo_vector.hpp"
 #include "hasher.hpp"
+#include "Rand_int.hpp"
 
-#include <random>
 #include <cmath>
 
 namespace ft
@@ -40,7 +40,8 @@ namespace ft
 
     cuckoo_filter ::cuckoo_filter(HashType hash_name,size_t cells, size_t fingerprint_size) : cells_(cells), fingerprint_size_(fingerprint_size), v_(cells, fingerprint_size),hash_name_(hash_name)
     {
-        seed_ = random();
+        Rand_int rnd{1,10000000};
+        seed_ = rnd();
     }
 
     void cuckoo_filter ::add(std::string const &o)

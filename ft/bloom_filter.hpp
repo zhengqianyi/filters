@@ -4,9 +4,10 @@
 #include "filter.hpp"
 #include "bitvector.hpp"
 #include "hasher.hpp"
+#include "Rand_int.hpp"
 
 #include <string>
-#include <random>
+
 
 namespace ft
 {
@@ -72,20 +73,22 @@ namespace ft
 
     bloom_filter ::bloom_filter(HashType hashname, size_t cells, size_t k_hash) : cells_(cells), bits_(cells), hash_name_(hashname)
     {
+        Rand_int rnd{0,100000};
         //initial the seeds
         auto t = k_hash;
         while (t--)
         {
-            seeds_.push_back(random());
+            seeds_.push_back(rnd());
         }
     }
 
     bloom_filter ::bloom_filter(double fp, size_t capacity, HashType hashname) : cells_(m(fp, capacity)), bits_(m(fp, capacity)), hash_name_(hashname)
     {
+        Rand_int rnd{0,100000};
         auto t = k(cells_, capacity);
         while (t--)
         {
-            seeds_.push_back(random());
+            seeds_.push_back(rnd());
         }
     }
 
