@@ -41,18 +41,17 @@ namespace ft
         return bits_[i % cells_];
     }
 
-    std::string bitvector :: to_string() const
+    std::string bitvector ::to_string() const
     {
         std::string s{};
-        for(auto p : bits_)
+        for (auto p : bits_)
         {
-            if(p)
+            if (p)
                 s.append("1");
             else
                 s.append("0");
         }
         return s;
-
     }
 
 } // namespace ft

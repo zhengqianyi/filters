@@ -33,7 +33,7 @@ int main()
         for (const auto s : str_list)
         {
             auto result = bloom_ft.lookup(s);
-            cout << s << "exist" << result << endl;
+            cout << s << " exist " << result << endl;
         }
     }
 
@@ -41,7 +41,7 @@ int main()
     cout << bloom_ft.get_bits() << endl;
 
     //test cuckoo_filter
-    cuckoo_filter cuckoo_ft(HashType::murmur, 3, 8);
+    cuckoo_filter cuckoo_ft(HashType::murmur, 10, 8);
 
     //add
 
@@ -54,7 +54,7 @@ int main()
     for (const auto s : str_list)
     {
         auto result = cuckoo_ft.lookup(s);
-        cout << s << "exist" << result << endl;
+        cout << s << " exist " << result << endl;
     }
 
     cout << cuckoo_ft.get_v() << endl;
