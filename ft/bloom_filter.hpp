@@ -8,13 +8,12 @@
 
 #include <string>
 
-
 namespace ft
 {
 
     class bloom_filter : public filter
     {
-    private:
+    public:
         /// the length of bits_
         size_t cells_;
 
@@ -28,7 +27,6 @@ namespace ft
         HashType hash_name_;
         ///
 
-    public:
         /// Computes the number of cells based on a false-positive rate and capacity.
         static size_t m(double fp, size_t capcity);
 
@@ -73,7 +71,7 @@ namespace ft
 
     bloom_filter ::bloom_filter(HashType hashname, size_t cells, size_t k_hash) : cells_(cells), bits_(cells), hash_name_(hashname)
     {
-        Rand_int rnd{0,100000};
+        Rand_int rnd{0, 100000};
         //initial the seeds
         auto t = k_hash;
         while (t--)
@@ -84,7 +82,7 @@ namespace ft
 
     bloom_filter ::bloom_filter(double fp, size_t capacity, HashType hashname) : cells_(m(fp, capacity)), bits_(m(fp, capacity)), hash_name_(hashname)
     {
-        Rand_int rnd{0,100000};
+        Rand_int rnd{0, 100000};
         auto t = k(cells_, capacity);
         while (t--)
         {
@@ -101,9 +99,9 @@ namespace ft
     bool bloom_filter ::lookup(std::string const &o) const
     {
         for (const auto s : seeds_)
-            if (bits_.check(hashf(hash_name_, s, o)) == true)
-                return true;
-        return false;
+            if (bits_.check(hashf(hash_name_, s, o)) != true)
+                return false;
+        return true;
     }
 
     size_t bloom_filter::get_cells() const
